@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+      <h2>This is add Laptop form page</h2>
+<div>
+    <form method="post" class="jumbotron" >
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="ADD LAPTOP DETAILS FORM">
+    </form>
+</div>
+<button><a href="{% url 'show_laptop' %}">SHOW LAPTOP DETAILS</a></button>
+{% endblock %}
+
+{% block title %}
+       <title>MY PROJECT TITLE</title>
+{% endblock %}

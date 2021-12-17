@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+       <h2>This is LAPTOP details info</h2>
+<table border="5 " class="table table-striped">
+    <tr>
+        <th>COMPANY</th>
+        <th>MODEL NAME</th>
+        <th>RAM</th>
+        <th>ROM</th>
+        <th>PROCESSOR</th>
+        <th>PRICE</th>
+        <th>WEIGHT</th>
+        <th>DELETE</th>
+        <th>UPDATE</th>
+
+    </tr>
+    {% for l in laptop %}
+    <tr>
+        <td>{{l.company}}</td>
+        <td>{{l.model_name}}</td>
+        <td>{{l.ram}}</td>
+        <td>{{l.rom}}</td>
+        <td>{{l.processor}}</td>
+        <td>{{l.price}}</td>
+        <td>{{l.weight}}</td>
+        <td>
+            <a href="{% url 'delete_laptop' l.id %}">
+                <button class="btn btn-danger">Delete</button></a>
+        </td>
+         <td>
+            <a href="{% url 'update_laptop' l.id %}">
+                <button class="btn btn-danger">Update</button></a>
+        </td>
+
+
+
+    </tr>
+    {% endfor %}
+
+</table>
+<button><a href="{% url 'add_laptop' %}">add laptop details</a></button>
+{% endblock %}
+{% block title %}
+       <title>My project title</title>
+{% endblock %}

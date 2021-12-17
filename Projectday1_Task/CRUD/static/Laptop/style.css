@@ -1,0 +1,73 @@
+header h1
+{
+  text-align: center;
+  background-color:Violet;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+h2 {
+  text-align: center;
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items:left;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+h1{
+   text-align: center;
+   color: red;
+   font-size: 150px;
+}
+
+
+
+body
+{
+background-color:Aquamarine;
+background-image: url("image14.jpg");
+background-repeat:no-repeat;
+background-size: 100%;
+}
+
+
+.Navbar
+{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: gray;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+li a:hover:not(.active) {
+  background-color: orange;
+}
+
+
+.block
+{
+text-align: center;
+color:red;
+
+}
+
